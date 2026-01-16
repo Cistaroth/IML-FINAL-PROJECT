@@ -1,6 +1,6 @@
 # Netflix Recommendation System
 
-<div style="text-align: center;">
+<div align="center">
 
 ![Static Badge](https://img.shields.io/badge/github-repo-blue?logo=github)
 ![Static Badge](https://img.shields.io/badge/version-1.0.0-green)
@@ -15,7 +15,7 @@
 </div>
 
 <br>
-<p style="text-align: center;">
+<p align= "center">
 We attempt to classify whether a user will watch a show using a KNN architecture. We train on the Netflix Prize Dataset.
 </p>
 
