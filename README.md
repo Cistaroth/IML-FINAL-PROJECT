@@ -135,4 +135,4 @@ We require installation of the UV Python package and project manager. Instructio
 ## Credits
 Developed as part of an Introduction to Machine Learning Course in 2025/2026
 
-@Cistaroth @SyntaxSculptor1 @ctenderini-web
+[@Cistaroth](https://github.com/Cistaroth) [@SyntaxSculptor1](https://github.com/SyntaxSculptor1) [@ctenderini-web](https://github.com/ctenderini-web)
