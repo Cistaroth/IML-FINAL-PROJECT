@@ -4,4 +4,10 @@ version = "1.0.0"
 description = "We attempt to classify whether a user will watch a show using a KNN architecture. We train on the Netflix Prize Dataset"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
+    "requests>=2.32.5",
+    "scikit-learn>=1.8.0",
+    "sentence-transformers>=5.2.0",
+]
