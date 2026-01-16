@@ -97,22 +97,22 @@ graph LR;
 
 ## Dataset
 
-<p style="font-size: 1.5rem; font-weight: bold;"> Netflix Price Dataset  </p> 
+<h3> Netflix Price Dataset  </h3>
 
 The dataset can be found [here.](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data)
 
-<p style="font-size:1.25rem; font-weight: bold;"> Context: </p>
+<h3> Context: </h3>
 Netflix held the Netflix Prize open competition for the best algorithm to predict user ratings for films. The grand prize was $1,000,000 and was won by BellKor's Pragmatic Chaos team. This is the dataset that was used in that competition.
 
 <br>
-<p style="font-size: 1.25rem; font-weight: bold;"> Dataset format: </p>
+<h3> Dataset format: </h3>
 
 The file "training_set.tar" is a tar of a directory containing 17770 files, one
 per movie. The first line of each file contains the movie id followed by a
 colon. Each subsequent line in the file corresponds to a rating from a customer
 and its date in the following format:
 
-<p style="text-align: center;">
+<p align="center">
 CustomerID,Rating,Date
 </p>
 
