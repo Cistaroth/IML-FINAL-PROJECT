@@ -1,3 +1,10 @@
+# Ignore processed data in csv format
+processed_data/*.csv
+
+# Ignore raw datafiles
+raw_data/*
+!raw_data/README.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
