@@ -23,7 +23,8 @@ def read_raw_data_files(file_paths: list[Path]) -> pd.DataFrame:
         file_paths (list[Path]): The paths to the files
 
     Returns:
-        pd.DataFrame: The dataframe of the data
+        pd.DataFrame: The dataframe of the data, columns are:
+            show_id, user_id, rating
     """
     console.print("\n[bold white]Reading Data...[/bold white]")
 
