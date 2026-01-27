@@ -2,7 +2,6 @@
 
 ## Full Dataset  - General Details
 
-<div align="center">
 | Property | Value |
 | --- | --- |
 | `Unique Users` | 480189 |
@@ -10,10 +9,8 @@
 | `Number of Ratings` | 100480507 |
 | `Mean Rating` | 3.60 |
 | `Standard Deviation Ratings` | 1.09 |
-</div>
 
 ## User Metadata - General Details
-<div align="center">
 | Property | Value |
 | --- | --- |
 | `User-ID` | 1314869 |
@@ -25,14 +22,11 @@
 | `Mean Processed Rating` | 2.97 |
 | `Standard Deviation Processed Ratings` | 0.95 |
 | `Number of Processed Ratings` | 9740 |
-</div>
 
 ## Candidates - General Details
-<div align="center">
 | Property | Value |
 | --- | --- |
 | `Candidates Count` | 68330 |
-</div>
 
 
 ## Full Dataset - Graphical Visualisation
