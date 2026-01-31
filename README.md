@@ -23,56 +23,51 @@ We attempt to classify whether a user will watch a show using a KNN architecture
 
 ```mermaid
 graph LR;
-    data_pull[Pull Data]
-    data_visualisation[Data Visualisation]
-    select_user[Selection of User]
-    collect_metadata[Collect Movie Meta Data]
 
-    generate_embeddings[Generate Embeddings]
-    train_test_split[Train-Validation-Test Split]
-    one_hot_encode_data[One Hot Encode Data]
-    normalize_data[Normalize Data]
-
-    train_model[Fit KNN model]
-    k_fold_cross_validation[Stratified K-fold CV]
-    train_final_model[Fit Final Model]
-    model_evaluation[Evaluate Model]
-
-    subgraph obtain_data["<h1> Data Acquisition </h1>"]
-    direction TB;
-    s1[ ]---data_pull;
-    data_pull-->data_visualisation;
-    data_visualisation-->select_user;
-    select_user-->collect_metadata;
+    subgraph obtain_data [ ]
+        direction TB
+        header1["<b>DATA ACQUISITION</b>"]
+        data_pull[Pull Data] --> data_visualisation[Data Visualisation]
+        data_visualisation --> select_user[Selection of User]
+        select_user --> collect_metadata[Collect Movie Meta Data]
+        
+        %% Connect header to the first node invisibly to keep it at the top
+        header1 ~~~ data_pull
     end
 
-    subgraph preprocessing["<h1> Preprocessing </h1>"]
-    direction TB;
-    s2[ ]---generate_embeddings;
-    generate_embeddings-->one_hot_encode_data;
-    one_hot_encode_data-->train_test_split;
-    train_test_split-->normalize_data;
+    subgraph preprocessing [ ]
+        direction TB
+        header2["<b>PREPROCESSING</b>"]
+        generate_embeddings[Generate Embeddings] --> one_hot_encode_data[One Hot Encode Data]
+        one_hot_encode_data --> train_test_split[Train-Validation-Test Split]
+        train_test_split --> normalize_data[Normalize Data]
+        
+        header2 ~~~ generate_embeddings
     end
 
-    subgraph model["<h1> <br/> Model </h1>"]
-    direction TB;
-    s3[ ]---train_model;
-    train_model-->k_fold_cross_validation;
-    k_fold_cross_validation-->train_final_model;
-    train_final_model-->model_evaluation;
+    subgraph model_section [ ]
+        direction TB
+        header3["<b>MODELING PHASE</b>"]
+        train_model[Fit KNN model] --> k_fold_cross_validation[Stratified K-fold CV]
+        k_fold_cross_validation --> train_final_model[Fit Final Model]
+        train_final_model --> model_evaluation[Evaluate Model]
+        
+        header3 ~~~ train_model
     end
 
-    obtain_data-->preprocessing;
+    %% Global Connections
+    obtain_data --> preprocessing
+    preprocessing --> model_section
 
-    preprocessing-->model;
+    %% Styling to make headers look like titles
+    style header1 fill:none,stroke:none,font-size:20px,font-weight:bold
+    style header2 fill:none,stroke:none,font-size:20px,font-weight:bold
+    style header3 fill:none,stroke:none,font-size:20px,font-weight:bold
     
-    style s1 fill:none,stroke:none
-    style s2 fill:none,stroke:none
-    style s3 fill:none,stroke:none
-    linkStyle 0,5,10 stroke:none
-
-
-
+    %% Styling the boxes
+    style obtain_data stroke:#333
+    style preprocessing stroke:#333
+    style model_section stroke:#333
 ```
 
 <!--
