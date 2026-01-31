@@ -27,44 +27,38 @@ graph LR;
     data_visualisation[Data Visualisation]
     select_user[Selection of User]
     collect_metadata[Collect Movie Meta Data]
-    data_cleaning[Cleaning up Data]
 
     generate_embeddings[Generate Embeddings]
     train_test_split[Train-Validation-Test Split]
     one_hot_encode_data[One Hot Encode Data]
     normalize_data[Normalize Data]
-    dimensionality_reduction[Dimensionality Reduction]
 
-    train_model[Train KNN model]
-    k_fold_cross_validation[K-fold Cross Validation]
-    select_optimal_parameters[Select Optimal Parameters]
-    train_final_model[Train Final Model]
+    train_model[Fit KNN model]
+    k_fold_cross_validation[Stratified K-fold CV]
+    train_final_model[Fit Final Model]
     model_evaluation[Evaluate Model]
 
-    subgraph obtain_data["<h1> Obtaining Data </h1>"]
+    subgraph obtain_data["<h1> Data Acquisition </h1>"]
     direction TB;
     s1[ ]---data_pull;
     data_pull-->data_visualisation;
     data_visualisation-->select_user;
     select_user-->collect_metadata;
-    collect_metadata-->data_cleaning
     end
 
     subgraph preprocessing["<h1> Preprocessing </h1>"]
     direction TB;
     s2[ ]---generate_embeddings;
-    generate_embeddings-->train_test_split;
-    train_test_split-->one_hot_encode_data;
-    one_hot_encode_data-->normalize_data;
-    normalize_data-->dimensionality_reduction
+    generate_embeddings-->one_hot_encode_data;
+    one_hot_encode_data-->train_test_split;
+    train_test_split-->normalize_data;
     end
 
     subgraph model["<h1> <br/> Model </h1>"]
     direction TB;
     s3[ ]---train_model;
     train_model-->k_fold_cross_validation;
-    k_fold_cross_validation-->select_optimal_parameters;
-    select_optimal_parameters-->train_final_model;
+    k_fold_cross_validation-->train_final_model;
     train_final_model-->model_evaluation;
     end
 
