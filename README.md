@@ -123,7 +123,7 @@ We require installation of the UV Python package and project manager. Instructio
 Raw data must be placed in the [raw_data](/raw_data/) folder. Please refer to the README.md of the aforementioned folder. To access processed data, the zip within the [processed_data](/processed_data/) folder must be unpacked.
 
 ## Report
-The report can be found [here](https://www.overleaf.com/8783437716pkfsdmznyffg#48f67d).
+The report can be found [here](/IML_FINAL_PROJECT_REPORT.pdf).
 
 
 ## Credits
